@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #e4eaf4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+    padding: 30px;
+    width: 350px;
+    max-width: 90%;
+}
+
+.card h1 {
+    text-align: left;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    position: relative; /* Para a animação da linha */
+    margin-bottom: 20px;
+}
+
+.input input {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    padding: 12px 0;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #ddd;
+    font-size: 18px;
+    box-sizing: border-box;
+    transition: border-bottom-color 0.3s ease; /* Para a animação da linha */
+}
+
+.input input::after {
+    /* Para a animação da linha */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: #075adf;
+    height: 2px;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.input input:focus {
+    border-bottom: 3px solid #075adf;
+}
+
+.input input:focus::after {
+    /* Para a animação da linha */
+    width: 100%;
+}
+
+.login-button {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    width: 100%;
+    background-color: #075adf;
+    color: white;
+    margin-top: 16px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0a4aae;
+}
+
+.table-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 700px;
+}
+
+table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+th:nth-child(1) {
+    width: 30%;
+}
+
+th:nth-child(2) {
+    width: 30%;
+}
+
+th:nth-child(3) {
+    width: 30%;
+}
+
+thead th {
+    background-color: #075adf;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #0a4aae;
+}
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+}
+
+tbody td {
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e2e4e6;
+}
